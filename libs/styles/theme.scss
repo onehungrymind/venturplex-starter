@@ -1,0 +1,84 @@
+@import 'variables';
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$custom-primary: (
+  50: #e7ebef,
+  100: #c2cdd8,
+  200: #9aacbe,
+  300: #718aa3,
+  400: #527190,
+  500: $primary,
+  600: #2f5074,
+  700: #274769,
+  800: #213d5f,
+  900: #152d4c,
+  A100: #88b8ff,
+  A200: #5599ff,
+  A400: #227aff,
+  A700: #086bff,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white
+  )
+);
+
+$custom-accent: (
+  50: #f0f6fd,
+  100: #dae9fa,
+  200: #c1dbf7,
+  300: #a8ccf4,
+  400: #96c1f1,
+  500: $accent,
+  600: #7bafed,
+  700: #70a6eb,
+  800: #669ee8,
+  900: #538ee4,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #deebff,
+  A700: #c4dcff,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white
+  )
+);
+
+$custom-primary: mat-palette($custom-primary);
+$custom-accent: mat-palette($custom-accent, 500, 900, A100);
+$custom-theme: mat-light-theme($custom-primary, $custom-accent);
+@include angular-material-theme($custom-theme);
+
+$custom-typography: mat-typography-config(
+  $font-family: $font-family
+);
+
+@include angular-material-typography($custom-typography);
+
+// You can use link below to generate color palette shades.
+// https://www.w3schools.com/colors/colors_picker.asp

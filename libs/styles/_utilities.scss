@@ -1,0 +1,26 @@
+
+@import "variables";
+
+// All utilities should have "!important"
+
+// App Specific Utilities
+
+// General Utilities
+.cursor-pointer {
+  pointer-events: all !important;
+  cursor: pointer !important;
+}
+
+.flex-auto {
+  flex: 0 0 auto !important;
+}
+
+// -----------------------------------------
+// Overwrite Bootstrap Classes
+// -----------------------------------------
+
+
+// NOTE: We are currently using the `bootstrap-utilities` package.
+// NOTE: This unfortunately does not give us access to Bootstraps variables to overwrite the theme colors.
+// NOTE: Because of that, we now have to manually intercept the classes and change the colors.
+// NOTE: Also, not all classes above are specific to Bootstrap.

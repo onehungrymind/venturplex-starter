@@ -1,0 +1,19 @@
+// Third Party Styles
+@import '~bootstrap-utilities';
+@import '~bootstrap-4-grid';
+
+// Project Partials (Note: Be carefull to accidentally overwrite styles)
+@import 'fonts';
+@import 'utilities';
+@import 'variables';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  color: $text-base !important;
+}
