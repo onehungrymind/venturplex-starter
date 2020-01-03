@@ -1,84 +1,52 @@
-# VenturplexStarter
+# Welcome To The VenturPlex Starter 👋
 
-This project was generated using [Nx](https://nx.dev).
+This repository is meant for VenturPlex projects as a starting point when creating applications. Anyone within the VenturPlex organization is welcome to use this for faster initial development and/or prototyping. You may start with updating this README and editing the appropriate portions.
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
+![image|app-image](https://picsum.photos/seed/picsum/800/500)
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+## Prerequisites
 
-## Quick Start & Documentation
+Before you begin you need to make sure you have everything needed to get the project up and running.
 
-[Nx Documentation](https://nx.dev/angular)
+- Make sure you are on the latest  [node](https://nodejs.org/en/)
+- We are using  [yarn](https://yarnpkg.com/lang/en/)  as the package manager for the frontend application.
+- Depending on your role on this project, reach out for specific permissions.
+- It will be best if you are on a MacOS machine, otherwise, there may be extra configurations needed on your end.
 
-[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
+## Getting Started
 
-[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
+Once all prerequisites are complete, run  `make init`  to download other necessary tools for development on MacOS.
 
-## Adding capabilities to your workspace
+We may be using [Terraform](https://www.terraform.io/) for our infratstructure tooling with AWS.
+If the AWS CLI has never been installed on your machine before, make sure to  [configure](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html#configure-awscli)  it.
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+## Local Development
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+For local development, run the following make commands:
 
-Below are some plugins which you can add to your workspace:
+```sh
+# Run this first and only once to install client dependencies.
+- make install
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+# Starting the client application
+- make start-client # This will start the client application
 
-## Generate an application
+# Starting the server
+- make start-server # starts up hasura and automatically applies migrations
+# Opening the Hasura Console (optional)
+- cd server
+- hasura console
+# This step is only required if you need access to the database. You can also find the GQL playground here, which may be helpful during development.
 
-Run `ng g @nrwl/angular:app my-app` to generate an application.
+# Run this to start clean versions of the applications
+- make start-clean
+```
 
-> You can use any of the plugins above to generate applications as well.
+> Note: Check back frequently in case anything has changed.
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+The frontend is available on  [http://localhost:4200](http://localhost:4200/)
+The backend is available on  [http://localhost:9695](http://localhost:9695/)
 
-## Generate a library
+## Author
 
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are sharable across libraries and applications. They can be imported from `@venturplex-starter/mylib`.
-
-## Development server
-
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng g component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+👤  **VenturPlex**
