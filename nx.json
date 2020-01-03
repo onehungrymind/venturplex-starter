@@ -16,6 +16,12 @@
     },
     "material": {
       "tags": []
+    },
+    "items-e2e": {
+      "tags": []
+    },
+    "items": {
+      "tags": []
     }
   }
 }
