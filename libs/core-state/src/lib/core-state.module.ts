@@ -6,6 +6,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { RootStoreConfig, StoreModule } from '@ngrx/store';
 
 import { reducers } from '.';
+import { ItemsEffects } from './items/items.effects';
 
 const storeConfig: RootStoreConfig<any> = {
   runtimeChecks: {
@@ -18,7 +19,7 @@ const storeConfig: RootStoreConfig<any> = {
   imports: [
     StoreModule.forRoot(reducers, storeConfig),
     EffectsModule.forRoot([
-
+      ItemsEffects
     ]),
     StoreDevtoolsModule.instrument({ name: 'VenturPlex Starter Store' })
   ],

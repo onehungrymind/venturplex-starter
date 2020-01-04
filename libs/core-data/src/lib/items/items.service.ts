@@ -46,11 +46,11 @@ export class ItemsService {
     );
   }
 
-  delete(id: string) {
+  delete(item: Partial<Item>) {
     return this.apollo.mutate({
       mutation: deleteItemMutation,
       variables: {
-        id
+        id: item.id
       }
     }).pipe(
       map((res: ApolloQueryResult<any>) => res.data.delete_items.returning[0])
