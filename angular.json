@@ -227,5 +227,5 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "core-data"
+  "defaultProject": "items"
 }
