@@ -244,6 +244,37 @@
           "styleext": "scss"
         }
       }
+    },
+    "amplify": {
+      "projectType": "library",
+      "root": "libs/amplify",
+      "sourceRoot": "libs/amplify/src",
+      "prefix": "workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/amplify/tsconfig.lib.json",
+              "libs/amplify/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/amplify/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/amplify/jest.config.js",
+            "tsConfig": "libs/amplify/tsconfig.spec.json",
+            "setupFile": "libs/amplify/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
