@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CoreDataModule } from '@workspace/core-data';
 import { CoreStateModule } from '@workspace/core-state';
 import { MaterialModule } from '@workspace/material';
+import { UiToolbarModule } from '@workspace/ui-toolbar';
 
 import { AppComponent } from './app.component';
 
@@ -13,7 +14,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     CoreDataModule,
     CoreStateModule,
-    MaterialModule
+    MaterialModule,
+    UiToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

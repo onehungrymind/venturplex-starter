@@ -213,6 +213,37 @@
           }
         }
       }
+    },
+    "ui-toolbar": {
+      "projectType": "library",
+      "root": "libs/ui-toolbar",
+      "sourceRoot": "libs/ui-toolbar/src",
+      "prefix": "workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-toolbar/tsconfig.lib.json",
+              "libs/ui-toolbar/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-toolbar/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-toolbar/jest.config.js",
+            "tsConfig": "libs/ui-toolbar/tsconfig.spec.json",
+            "setupFile": "libs/ui-toolbar/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
