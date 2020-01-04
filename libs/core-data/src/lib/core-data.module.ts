@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 
 import { APOLLO_OPTIONS, ApolloModule } from 'apollo-angular';
 import { HttpLink, HttpLinkModule } from 'apollo-angular-link-http';
@@ -9,7 +9,7 @@ const uri = 'http://0.0.0.0:8080/v1/graphql';
 
 export function createApollo(httpLink: HttpLink) {
   return {
-    link: httpLink.create({ uri }),
+    link: httpLink.create({ uri, headers: new HttpHeaders().set('x-hasura-admin-secret', 'secret') }),
     cache: new InMemoryCache()
   };
 }

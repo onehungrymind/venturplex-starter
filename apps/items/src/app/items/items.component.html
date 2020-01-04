@@ -1,1 +1,15 @@
-<p>items works!</p>
+<div class="container pt-4">
+  <div class="col-6">
+    <workspace-items-list [items]="items$ | async"
+                          (selected)="select($event)"
+                          (deleted)="delete($event)">
+    </workspace-items-list>
+  </div>
+  <div class="col-6">
+    <workspace-items-details [item]="item"
+                              [group]="form"
+                              (saved)="save($event)"
+                              (cancelled)="reset()">
+    </workspace-items-details>
+  </div>
+</div>

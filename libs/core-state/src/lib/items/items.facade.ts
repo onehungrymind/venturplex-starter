@@ -6,6 +6,8 @@ import * as fromItems from './items.reducer';
 import * as itemsActions from './items.actions';
 import * as itemsSelectors from './items.selectors';
 import { Item } from '@workspace/core-data';
+import { Actions } from '@ngrx/effects';
+import { filter } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +16,18 @@ export class ItemsFacade {
   allItems$ = this.store.pipe(select(itemsSelectors.selectAllItems));
   selectedItem$ = this.store.pipe(select(itemsSelectors.selectItem));
   itemLoading$ = this.store.pipe(select(itemsSelectors.selectItemsLoading));
+  mutations$ = this.actions$.pipe(
+    filter((action) =>
+      action.type === itemsActions.createItem({} as any).type ||
+      action.type === itemsActions.updateItem({} as any).type ||
+      action.type === itemsActions.deleteItem({} as any).type
+    )
+  )
 
-  constructor(private store: Store<fromItems.ItemsPartialState>) {}
+  constructor(
+    private store: Store<fromItems.ItemsPartialState>,
+    private actions$: Actions
+  ) {}
 
   selectItem(selectedItemId: string) {
     this.dispatch(itemsActions.itemSelected({ selectedItemId }));

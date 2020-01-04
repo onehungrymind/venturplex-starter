@@ -6,7 +6,7 @@ export const itemsFragment = gql`
     name
     description
     created_at
-    deleted_at
+    updated_at
   }
 `;
 

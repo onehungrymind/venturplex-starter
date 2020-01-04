@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CoreDataModule } from '@workspace/core-data';
 import { CoreStateModule } from '@workspace/core-state';
@@ -16,6 +17,8 @@ import { ItemsDetailsComponent } from './items/items-details/items-details.compo
   declarations: [AppComponent, ItemsComponent, ItemsListComponent, ItemsDetailsComponent],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     CoreDataModule,
     CoreStateModule,
     MaterialModule,
