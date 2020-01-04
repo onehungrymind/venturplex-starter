@@ -1,0 +1,8 @@
+- args:
+    cascade: false
+    sql: |-
+      INSERT INTO user_roles (role, description) VALUES
+          ('admin', 'Administrator user which has access to all users and capabilities'),
+          ('user', 'Normal user which has access to only his/her items and capabilities'),
+          ('anonymous', 'Anonymous user which can view published items and no capabilities');
+  type: run_sql

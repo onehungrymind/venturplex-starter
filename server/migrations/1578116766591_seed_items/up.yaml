@@ -1,7 +1,0 @@
-- args:
-    cascade: false
-    sql: |-
-      INSERT INTO items (name, description) VALUES
-        ('Item One', 'This is the description for item one'),
-        ('Item Two', 'This is the description for item two');
-  type: run_sql
