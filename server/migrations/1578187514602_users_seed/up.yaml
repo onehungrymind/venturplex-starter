@@ -1,0 +1,7 @@
+- args:
+    cascade: false
+    sql: |-
+      INSERT INTO users (name, username, role) VALUES
+          ('Lukas Ruebbelke', 'simpulton', 'admin'),
+          ('Jonathan Garvey', 'jdgarvey', 'user')
+  type: run_sql
