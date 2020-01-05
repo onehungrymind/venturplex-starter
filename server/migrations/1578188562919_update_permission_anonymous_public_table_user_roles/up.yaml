@@ -1,0 +1,13 @@
+- args:
+    permission:
+      allow_aggregations: false
+      columns:
+      - description
+      - role
+      filter: {}
+      limit: null
+    role: anonymous
+    table:
+      name: user_roles
+      schema: public
+  type: create_select_permission

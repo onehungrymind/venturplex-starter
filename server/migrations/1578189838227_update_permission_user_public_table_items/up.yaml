@@ -1,0 +1,22 @@
+- args:
+    permission:
+      allow_upsert: true
+      check:
+        id:
+          _eq: X-Hasura-User-Id
+      columns:
+      - description
+      - title
+      - created_at
+      - updated_at
+      - id
+      - user_id
+      localPresets:
+      - key: ""
+        value: ""
+      set: {}
+    role: user
+    table:
+      name: items
+      schema: public
+  type: create_insert_permission
