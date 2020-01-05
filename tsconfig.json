@@ -20,7 +20,7 @@
       "@workspace/core-state": ["libs/core-state/src/index.ts"],
       "@workspace/material": ["libs/material/src/index.ts"],
       "@workspace/ui-toolbar": ["libs/ui-toolbar/src/index.ts"],
-      "@workspace/amplify": ["libs/amplify/src/index.ts"]
+      "@workspace/aws-amplify": ["libs/aws-amplify/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

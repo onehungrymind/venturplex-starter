@@ -245,28 +245,28 @@
         }
       }
     },
-    "amplify": {
+    "aws-amplify": {
       "projectType": "library",
-      "root": "libs/amplify",
-      "sourceRoot": "libs/amplify/src",
+      "root": "libs/aws-amplify",
+      "sourceRoot": "libs/aws-amplify/src",
       "prefix": "workspace",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/amplify/tsconfig.lib.json",
-              "libs/amplify/tsconfig.spec.json"
+              "libs/aws-amplify/tsconfig.lib.json",
+              "libs/aws-amplify/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/amplify/**"]
+            "exclude": ["**/node_modules/**", "!libs/aws-amplify/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/amplify/jest.config.js",
-            "tsConfig": "libs/amplify/tsconfig.spec.json",
-            "setupFile": "libs/amplify/src/test-setup.ts"
+            "jestConfig": "libs/aws-amplify/jest.config.js",
+            "tsConfig": "libs/aws-amplify/tsconfig.spec.json",
+            "setupFile": "libs/aws-amplify/src/test-setup.ts"
           }
         }
       },

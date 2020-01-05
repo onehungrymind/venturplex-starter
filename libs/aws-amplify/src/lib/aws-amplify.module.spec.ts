@@ -1,14 +1,14 @@
 import { async, TestBed } from '@angular/core/testing';
-import { AmplifyModule } from './amplify.module';
+import { AwsAmplifyModule } from './aws-amplify.module';
 
-describe('AmplifyModule', () => {
+describe('AwsAmplifyModule', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [AmplifyModule]
+      imports: [AwsAmplifyModule]
     }).compileComponents();
   }));
 
   it('should create', () => {
-    expect(AmplifyModule).toBeDefined();
+    expect(AwsAmplifyModule).toBeDefined();
   });
 });
