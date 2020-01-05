@@ -1,0 +1,9 @@
+- args:
+    cascade: false
+    sql: |-
+      INSERT INTO items (title, description, user_id) VALUES
+          ('Lukas First Item', 'This is the first item for Lukas', '8dc6ccf6-af7f-48e3-a4be-ebb32515b7ba'),
+          ('Lukas Second Item', 'This is the second item for Lukas', '8dc6ccf6-af7f-48e3-a4be-ebb32515b7ba'),
+          ('Jonathans First Item', 'This is the first item for Jonathan', '98e418a9-a570-4b6a-90bc-bcb4c510be57'),
+          ('Jonathans Second Item', 'This is the second item for Jonathan', '98e418a9-a570-4b6a-90bc-bcb4c510be57')
+  type: run_sql
