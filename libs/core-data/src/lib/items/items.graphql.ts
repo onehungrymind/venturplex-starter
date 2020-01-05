@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 export const itemsFragment = gql`
   fragment itemsFragment on items {
     id
-    name
+    title
     description
     created_at
     updated_at

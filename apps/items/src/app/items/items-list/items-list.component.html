@@ -1,7 +1,7 @@
 <mat-card>
   <mat-list>
     <mat-list-item *ngFor="let item of items" class="mat-list-option" (click)="select(item)">
-      <h3 mat-line>{{item.name}}</h3>
+      <h3 mat-line>{{item.title}}</h3>
       <span mat-line>{{item.description}}</span>
       <button mat-icon-button class="mat-pseudo-checkbox" type="button" (click)="delete(item, $event)">
         <mat-icon>clear</mat-icon>

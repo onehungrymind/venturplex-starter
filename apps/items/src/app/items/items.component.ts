@@ -55,7 +55,7 @@ export class ItemsComponent implements OnInit {
   private initForm() {
     this.form = this.formBuilder.group({
       id: null,
-      name: ['', Validators.compose([Validators.required])],
+      title: ['', Validators.compose([Validators.required])],
       description: ['']
     });
   }
